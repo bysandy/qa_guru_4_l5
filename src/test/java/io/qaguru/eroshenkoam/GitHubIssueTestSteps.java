@@ -17,8 +17,8 @@ import static io.qameta.allure.Allure.step;
 public class GitHubIssueTestSteps extends TestBase{
 
     private static final String BASE_URL = "https://github.com";
-    private static final String REPOSITORY = "eroshenkoam/allure-example";
-    private static final String ISSUE_NUMBER = "#68";
+    private static final String REPOSITORY = "bysandy/qa_guru_4_l5";
+    private static final String ISSUE_NUMBER = "#3";
 
     @Test
     @Link(name = "Base URL", value = BASE_URL)

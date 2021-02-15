@@ -10,14 +10,14 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class GitHubIssueTest extends TestBase {
 
-    private static final String REPOSITORY = "eroshenkoam/allure-example";
-    private static final String ISSUE_NUMBER = "#68";
+    private static final String REPOSITORY = "bysandy/qa_guru_4_l5";
+    private static final String ISSUE_NUMBER = "#3";
 
     @Test
     public void testIssueSearch(){
         // Open github.com
         open("https://github.com");
-        // Fill in the search field  eroshenkoam/allure-example
+        // Fill in the search field  bysandy/qa_guru_4_l5
         // Tap on the Search button
         $(".header-search-input").click();
         $(".header-search-input").sendKeys(REPOSITORY);
@@ -27,7 +27,7 @@ public class GitHubIssueTest extends TestBase {
         $(By.linkText(REPOSITORY)).click();
         // Tap on the Issues
         $(withText("Issues")).click();
-        // Check that the issue #68 exist
+        // Check that the issue #3 exist
         $(withText(ISSUE_NUMBER)).should(Condition.exist);
 
     }
