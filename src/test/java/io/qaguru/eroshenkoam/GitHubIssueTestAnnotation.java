@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 
 import static io.qameta.allure.Allure.parameter;
 
-public class GitHubIssueTestAnnotation extends TestBase{
-    public  BaseSteps steps = new BaseSteps();
+public class GitHubIssueTestAnnotation extends TestBase {
+    public BaseSteps steps = new BaseSteps();
 
     private static final String BASE_URL = "https://github.com";
     private static final String REPOSITORY = "bysandy/qa_guru_4_l5";
@@ -23,7 +23,7 @@ public class GitHubIssueTestAnnotation extends TestBase{
     @Feature("Issues")
     @Story("Search Issue in already existed repository")
     @DisplayName("Search Issue by number in repository")
-    public void testIssueSearch(){
+    public void testIssueSearch() {
         parameter("Repository", REPOSITORY);
         parameter("Issue Number", ISSUE_NUMBER);
 

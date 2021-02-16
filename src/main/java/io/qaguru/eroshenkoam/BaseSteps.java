@@ -12,25 +12,29 @@ public class BaseSteps {
     private static final String BASE_URL = "https://github.com";
 
     @Step("Open github.com")
-    public void openMainPage(){
+    public void openMainPage() {
         open(BASE_URL);
     }
+
     @Step("Search {repository}")
-    public void searchForRepository(final String repository){
+    public void searchForRepository(final String repository) {
         $(".header-search-input").click();
         $(".header-search-input").sendKeys(repository);
         $(".header-search-input").submit();
     }
+
     @Step("Open the repository {repository}")
-    public void goToRepositoryFromSearch(final String repository){
+    public void goToRepositoryFromSearch(final String repository) {
         $(By.linkText(repository)).click();
     }
+
     @Step("Tap on the Issues")
-    public void openRepositoryIssues(){
+    public void openRepositoryIssues() {
         $(withText("Issues")).click();
     }
+
     @Step("Check that the issue {number} exist")
-    public void issueSeeIssueWithNumber(final String number){
+    public void issueSeeIssueWithNumber(final String number) {
         $(withText(number)).should(Condition.exist);
     }
 }

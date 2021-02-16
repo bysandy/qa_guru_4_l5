@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.parameter;
 import static io.qameta.allure.Allure.step;
 
-public class GitHubIssueTestSteps extends TestBase{
+public class GitHubIssueTestSteps extends TestBase {
 
     private static final String BASE_URL = "https://github.com";
     private static final String REPOSITORY = "bysandy/qa_guru_4_l5";
@@ -28,11 +28,11 @@ public class GitHubIssueTestSteps extends TestBase{
     @Feature("Issues")
     @Story("Search Issue in already existed repository")
     @DisplayName("Search Issue by number in repository")
-    public void testIssueSearch(){
+    public void testIssueSearch() {
         parameter("Repository", REPOSITORY);
         parameter("Issue Number", ISSUE_NUMBER);
 
-        step("Open github.com", ()-> {
+        step("Open github.com", () -> {
             open(BASE_URL);
         });
 
@@ -46,11 +46,11 @@ public class GitHubIssueTestSteps extends TestBase{
             $(By.linkText(REPOSITORY)).click();
         });
 
-        step("Tap on the Issues", ()-> {
+        step("Tap on the Issues", () -> {
             $(withText("Issues")).click();
         });
 
-        step("Check that the issue " + ISSUE_NUMBER + " exist",() -> {
+        step("Check that the issue " + ISSUE_NUMBER + " exist", () -> {
             $(withText(ISSUE_NUMBER)).should(Condition.exist);
         });
     }

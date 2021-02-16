@@ -16,7 +16,7 @@ public class GitHubIssueTest extends TestBase {
     private static final String ISSUE_NUMBER = "#3";
 
     @Test
-    public void testIssueSearch(){
+    public void testIssueSearch() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         // Open github.com
         open(BASE_URL);
