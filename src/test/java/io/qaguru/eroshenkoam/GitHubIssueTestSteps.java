@@ -51,7 +51,7 @@ public class GitHubIssueTestSteps extends TestBase {
         });
 
         step("Check that the issue " + ISSUE_NUMBER + " exist", () -> {
-            $(withText(ISSUE_NUMBER)).should(Condition.exist);
+            $(withText(ISSUE_NUMBER)).should(Condition.visible);
         });
     }
 

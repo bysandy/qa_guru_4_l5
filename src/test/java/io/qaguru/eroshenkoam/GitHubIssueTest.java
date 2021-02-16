@@ -31,7 +31,7 @@ public class GitHubIssueTest extends TestBase {
         // Tap on the Issues
         $(withText("Issues")).click();
         // Check that the issue #3 exist
-        $(withText(ISSUE_NUMBER)).should(Condition.exist);
+        $(withText(ISSUE_NUMBER)).should(Condition.visible);
 
     }
 
