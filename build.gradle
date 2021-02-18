@@ -18,9 +18,9 @@ repositories {
 }
 
 dependencies {
-    compile('io.qameta.allure:allure-java-commons:2.13.8')
-    compile('com.codeborne:selenide:5.18.1')
-    compile('io.qameta.allure:allure-selenide:2.13.8')
+    compile 'io.qameta.allure:allure-java-commons:2.13.8'
+    compile 'com.codeborne:selenide:5.18.1'
+    compile 'io.qameta.allure:allure-selenide:2.13.8'
     testImplementation 'com.codeborne:selenide:5.18.0'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
     testImplementation 'com.github.javafaker:javafaker:1.0.2'

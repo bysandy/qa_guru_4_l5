@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -37,9 +38,7 @@ public class GitHubIssueTestSteps extends TestBase {
         });
 
         step("Search " + REPOSITORY, () -> {
-            $(".header-search-input").click();
-            $(".header-search-input").sendKeys(REPOSITORY);
-            $(".header-search-input").submit();
+            $(".header-search-input").setValue(REPOSITORY).submit();
         });
 
         step("Open the repository " + REPOSITORY, () -> {
@@ -51,7 +50,7 @@ public class GitHubIssueTestSteps extends TestBase {
         });
 
         step("Check that the issue " + ISSUE_NUMBER + " exist", () -> {
-            $(withText(ISSUE_NUMBER)).should(Condition.visible);
+            $(withText(ISSUE_NUMBER)).should(visible);
         });
     }
 
